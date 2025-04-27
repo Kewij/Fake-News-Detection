@@ -11,6 +11,7 @@ from transformers import BertTokenizer
 
 def main(dataset_name: str):
 
+    print("Downloading dataset...")
     if dataset_name == "emineyetm":
 
         path = kagglehub.dataset_download("emineyetm/fake-news-detection-datasets")
@@ -37,6 +38,7 @@ def main(dataset_name: str):
     batch_size = 64
     data_processing = DataPreProcessing(tokenizer=tokenizer, df=df, test_size=test_size, val_size=val_size, batch_size=batch_size)
 
+    print("Data Preprocessing...")
     train_dataloader, test_dataloader, val_dataloader = data_processing.data_preprocessing()
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

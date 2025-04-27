@@ -5,7 +5,7 @@ import pandas as pd
 from sklearn.metrics import accuracy_score, f1_score
 from IPython.display import display
 
-from pretrained_models import BERTClassifier
+from src.models.pretrained_models import BERTClassifier
 
 class FakeNewsDetector():
 
