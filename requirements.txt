@@ -1,0 +1,9 @@
+ipython
+kagglehub
+numpy
+pandas
+plotly
+scikit-learn
+torch
+tqdm
+transformers
